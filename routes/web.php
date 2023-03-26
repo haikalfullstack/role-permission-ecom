@@ -1,10 +1,11 @@
 <?php
 
-use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
-
 use App\Http\Controllers\AdminController;
+
 use App\Http\Controllers\VendorController;
+use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\Backend\RoleController;
 
 /*
 |--------------------------------------------------------------------------
@@ -42,6 +43,12 @@ Route::middleware(['auth', 'role:admin'])->group(function(){
     Route::post('/admin/profile/store', [AdminController::class, 'AdminProfileStore'])->name('admin.profile.store');
     Route::get('/admin/change/password', [AdminController::class, 'AdminChangePassword'])->name('admin.change.password');
     Route::post('/admin/update/password', [AdminController::class, 'AdminUpdatePassword'])->name('update.password');
+
+    // Roles & Permission
+    // Route::controller('RoleController::class')->group(function(){
+    //     Route::get('/all/permission', 'AllPermission')->name('all.permission');
+    // });
+    Route::get('/all/permission', [RoleController::class, 'AllPermission'])->name('all.permission');
 });
 
 // Vendor Dashboard
