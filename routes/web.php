@@ -44,13 +44,20 @@ Route::middleware(['auth', 'role:admin'])->group(function(){
     Route::get('/admin/change/password', [AdminController::class, 'AdminChangePassword'])->name('admin.change.password');
     Route::post('/admin/update/password', [AdminController::class, 'AdminUpdatePassword'])->name('update.password');
 
-    // Roles & Permission
-    // Route::controller('RoleController::class')->group(function(){
-    //     Route::get('/all/permission', 'AllPermission')->name('all.permission');
-    // });
+    // Permission all routes
+  
     Route::get('/all/permission', [RoleController::class, 'AllPermission'])->name('all.permission');
     Route::get('/add/permission', [RoleController::class, 'AddPermission'])->name('add.permission');
     Route::post('/store/permission', [RoleController::class, 'StorePermission'])->name('store.permission');
+    Route::get('/edit/permission/{id}', [RoleController::class, 'EditPermission'])->name('edit.permission');
+    Route::post('/update/permission', [RoleController::class, 'UpdatePermission'])->name('update.permission');
+    Route::get('/delete/permission/{id}', [RoleController::class, 'DeletePermission'])->name('delete.permission');
+
+       
+   // Roles all routes
+    Route::get('/all/roles', [RoleController::class, 'AllRoles'])->name('all.roles');
+    Route::get('/add/roles', [RoleController::class, 'AddRoles'])->name('add.roles');
+    Route::post('/store/roles', [RoleController::class, 'StoreRoles'])->name('store.roles');
     Route::get('/edit/permission/{id}', [RoleController::class, 'EditPermission'])->name('edit.permission');
     Route::post('/update/permission', [RoleController::class, 'UpdatePermission'])->name('update.permission');
     Route::get('/delete/permission/{id}', [RoleController::class, 'DeletePermission'])->name('delete.permission');
