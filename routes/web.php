@@ -61,6 +61,9 @@ Route::middleware(['auth', 'role:admin'])->group(function(){
     Route::get('/edit/roles/{id}', [RoleController::class, 'EditRoles'])->name('edit.roles');
     Route::post('/update/roles', [RoleController::class, 'UpdateRoles'])->name('update.roles');
     Route::get('/delete/roles/{id}', [RoleController::class, 'DeleteRoles'])->name('delete.roles');
+
+    // Roles in permission
+    Route::get('/add/roles/permission', [RoleController::class, 'AddRolesPermission'])->name('add.roles.permission');
 });
 
 // Vendor Dashboard
