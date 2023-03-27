@@ -175,20 +175,15 @@
                 <li> <a href="authentication-signup.html" target="_blank"><i class="bx bx-right-arrow-alt"></i>Sign
                         Up</a>
                 </li>
-                <li> <a href="authentication-signin-with-header-footer.html" target="_blank"><i
-                            class="bx bx-right-arrow-alt"></i>Sign In with Header & Footer</a>
+                <li> <a href="authentication-signin-with-header-footer.html" target="_blank"><i class="bx bx-right-arrow-alt"></i>Sign In with Header & Footer</a>
                 </li>
-                <li> <a href="authentication-signup-with-header-footer.html" target="_blank"><i
-                            class="bx bx-right-arrow-alt"></i>Sign Up with Header & Footer</a>
+                <li> <a href="authentication-signup-with-header-footer.html" target="_blank"><i class="bx bx-right-arrow-alt"></i>Sign Up with Header & Footer</a>
                 </li>
-                <li> <a href="authentication-forgot-password.html" target="_blank"><i
-                            class="bx bx-right-arrow-alt"></i>Forgot Password</a>
+                <li> <a href="authentication-forgot-password.html" target="_blank"><i class="bx bx-right-arrow-alt"></i>Forgot Password</a>
                 </li>
-                <li> <a href="authentication-reset-password.html" target="_blank"><i
-                            class="bx bx-right-arrow-alt"></i>Reset Password</a>
+                <li> <a href="authentication-reset-password.html" target="_blank"><i class="bx bx-right-arrow-alt"></i>Reset Password</a>
                 </li>
-                <li> <a href="authentication-lock-screen.html" target="_blank"><i
-                            class="bx bx-right-arrow-alt"></i>Lock Screen</a>
+                <li> <a href="authentication-lock-screen.html" target="_blank"><i class="bx bx-right-arrow-alt"></i>Lock Screen</a>
                 </li>
             </ul>
         </li>
@@ -257,7 +252,9 @@
                 </li>
                 <li> <a href="{{ route('add.roles.permission') }}"><i class="bx bx-right-arrow-alt"></i>Add Roles in Permission</a>
                 </li>
-              
+                <li> <a href="{{ route('all.roles.permission') }}"><i class="bx bx-right-arrow-alt"></i>All Roles in Permission</a>
+                </li>
+
             </ul>
         </li>
         <li>
