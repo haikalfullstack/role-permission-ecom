@@ -64,6 +64,7 @@ Route::middleware(['auth', 'role:admin'])->group(function(){
 
     // Roles in permission
     Route::get('/add/roles/permission', [RoleController::class, 'AddRolesPermission'])->name('add.roles.permission');
+    Route::post('/role/permission/store', [RoleController::class, 'RolePermissionStore'])->name('role.permission.store');
 });
 
 // Vendor Dashboard
